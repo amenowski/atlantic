@@ -4,12 +4,13 @@ import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Blog from "./pages/Blog";
 import Philosophy from "./pages/Philosophy";
+import AppLayout from "./ui/AppLayout";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element>
+        <Route element={<AppLayout />}>
           <Route index element={<Navigate replace to="home" />} />
           <Route path="home" element={<Home />} />
           <Route path="shop" element={<Shop />} />
