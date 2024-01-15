@@ -31,10 +31,10 @@ function CartPreview() {
         </div>
         <div>as</div>
         <div className="flex gap-2">
-          <Button type="secondary" to="cart">
+          <Button width="full" type="secondary" to="cart">
             View cart
           </Button>
-          <Button type="primary" to="cart">
+          <Button width="full" type="primary" to="cart">
             Checkout
           </Button>
         </div>
