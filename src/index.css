@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'madera-bold';
+  src: url('assets/fonts/Madera-bold.ttf');
+}
+
+@font-face {
+  font-family: 'madera-regular';
+  src: url('assets/fonts/Madera-regular.ttf');
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 25px;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+}
