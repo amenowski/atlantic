@@ -8,7 +8,7 @@ function Product({ product }) {
   return (
     <div className="group/product relative">
       <Link to={`/product/${id}`}>
-        <img src={images[0]} />
+        <img src={images[0]} alt={name} />
         <img
           src={images[1]}
           className="absolute left-0 top-0 hidden group-hover/product:block"
