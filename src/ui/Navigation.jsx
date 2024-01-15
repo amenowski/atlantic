@@ -4,13 +4,13 @@ import { IoIosArrowDown } from 'react-icons/io';
 function Navigation() {
   return (
     <nav className="hidden lg:block">
-      <ul className="flex uppercase text-secondary">
+      <ul className="text-secondary flex uppercase">
         <li className="group relative p-4 hover:bg-primary hover:text-white">
           <div className="flex cursor-pointer items-center gap-1">
             <Link to="shop/living">living</Link>
             <IoIosArrowDown />
           </div>
-          <div className="absolute left-0 top-[55px] hidden w-56 flex-col gap-2 bg-primary px-6 py-4 normal-case group-hover:flex">
+          <div className="absolute left-0 top-[55px] z-[999] hidden w-56 flex-col gap-2 bg-primary px-6 py-4 normal-case group-hover:flex">
             <Link
               className="transition-all duration-300 hover:text-gray-300"
               to="shop/living/storage"
@@ -42,7 +42,7 @@ function Navigation() {
             <Link to="shop/dining">Lighiting</Link>
             <IoIosArrowDown />
           </div>
-          <div className="absolute left-0 top-[55px] hidden w-56 flex-col gap-2 bg-primary px-6 py-4 normal-case group-hover:flex">
+          <div className="absolute left-0 top-[55px] z-[999] hidden w-56 flex-col gap-2 bg-primary px-6 py-4 normal-case group-hover:flex">
             <Link
               className="transition-all duration-300 hover:text-gray-300"
               to="shop/living/lamps"
@@ -62,7 +62,7 @@ function Navigation() {
             <Link to="shop/living">Dining</Link>
             <IoIosArrowDown />
           </div>
-          <div className="absolute left-0 top-[55px] hidden w-56 flex-col gap-2 bg-primary px-6 py-4 normal-case group-hover:flex">
+          <div className="absolute left-0 top-[55px] z-[999] hidden w-56 flex-col gap-2 bg-primary px-6 py-4 normal-case group-hover:flex">
             <Link
               className="transition-all duration-300 hover:text-gray-300"
               to="shop/living/tableware"
@@ -94,7 +94,7 @@ function Navigation() {
             <Link to="shop/living">furniture</Link>
             <IoIosArrowDown />
           </div>
-          <div className="absolute left-0 top-[55px] hidden w-56 flex-col gap-2 bg-primary px-6 py-4 normal-case group-hover:flex">
+          <div className="absolute left-0 top-[55px] z-[999] hidden w-56 flex-col gap-2 bg-primary px-6 py-4 normal-case group-hover:flex">
             <Link
               className="transition-all duration-300 hover:text-gray-300"
               to="shop/living/chairs"
