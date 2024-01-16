@@ -19,3 +19,11 @@ export function calcMinutesLeft(dateStr) {
   const d2 = new Date(dateStr).getTime();
   return Math.round((d2 - d1) / 60000);
 }
+
+export const formatNameForURL = (name) => {
+  return name.replace(/\s+/g, '-');
+};
+
+export const revertFormattedName = (formattedName) => {
+  return formattedName.replace(/-/g, ' ');
+};
