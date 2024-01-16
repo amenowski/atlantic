@@ -10,3 +10,17 @@ export async function getProducts() {
 
   return products;
 }
+
+export async function getProductByName(name) {
+  const { data: product, error } = await supabase
+    .from('products')
+    .select('*')
+    .eq('name', name);
+
+  if (error) {
+    console.error(error);
+    throw new Error('Product could be not loaded');
+  }
+
+  return product;
+}
