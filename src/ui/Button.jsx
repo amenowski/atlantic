@@ -12,7 +12,7 @@ function Button({ children, disabled, to, type, onClick, width }) {
 
   if (to)
     return (
-      <Link to={to} className={styles[type]}>
+      <Link to={to} className={`block ${styles[type]} `}>
         {children}
       </Link>
     );
