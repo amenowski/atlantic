@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
-import { formatCurrency } from '../utils/helpers';
+import { formatCurrency, formatNameForURL } from '../utils/helpers';
 import Button from './Button';
 
 function Product({ product }) {
   const { id, name, price, images } = product;
 
+  const formattedName = formatNameForURL(name);
+
   return (
     <div className="group/product relative">
-      <Link to={`/product/${id}`}>
+      <Link to={`/product/${formattedName}`}>
         <img src={images[0]} alt={name} />
         <img
           src={images[1]}
