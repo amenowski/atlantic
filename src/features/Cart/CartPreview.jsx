@@ -3,9 +3,14 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { IoMdClose } from 'react-icons/io';
 import Button from '../../ui/Button';
 import { useCartPreview } from '../../contexts/CartPreviewProvider';
+import { useSelector } from 'react-redux';
+import { getCart } from './cartSlice';
+import CartPreviewProduct from './CartPreviewProduct';
+import EmptyCart from '../../ui/EmptyCart';
 
 function CartPreview() {
-  const { onSetIsOpenCart, isNavOpen } = useCartPreview();
+  const { onSetIsOpenCart } = useCartPreview();
+  const cart = useSelector(getCart);
 
   function handleCloseCart() {
     onSetIsOpenCart(false);
@@ -29,14 +34,28 @@ function CartPreview() {
             onClick={handleCloseCart}
           />
         </div>
-        <div>as</div>
+        <div>
+          {cart.length === 0 ? (
+            <EmptyCart />
+          ) : (
+            <ul>
+              {cart?.map((product) => (
+                <CartPreviewProduct product={product} key={product.id} />
+              ))}
+            </ul>
+          )}
+        </div>
         <div className="flex gap-2">
-          <Button width="full" type="secondary" to="cart">
-            View cart
-          </Button>
-          <Button width="full" type="primary" to="cart">
-            Checkout
-          </Button>
+          {cart.length > 0 && (
+            <>
+              <Button width="full" type="secondary" to="cart">
+                View cart
+              </Button>
+              <Button width="full" type="primary" to="cart">
+                Checkout
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </motion.div>,
