@@ -20,13 +20,15 @@ function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
   const { onSetIsOpenCart } = useCartPreview();
-  const currentQuantity = useSelector((state) =>
-    getCurrentProductQuantity(state, product?.id),
+
+  const currentQuantity = useSelector(
+    getCurrentProductQuantity(product.at(0)?.id),
   );
 
   if (isLoading) return <Spinner />;
 
   const {
+    id,
     price,
     images,
     material,
@@ -38,12 +40,18 @@ function ProductDetails() {
     isDiscount,
   } = product.at(0);
 
+  const isInCart = currentQuantity > 0;
+
+  console.log(currentQuantity);
+  console.log(isInCart);
+
   function handleAddProduct(e) {
     e.preventDefault();
 
     if (Number(quantity) === 0) return;
 
     const newProduct = {
+      id,
       name,
       price,
       images,
@@ -54,15 +62,13 @@ function ProductDetails() {
       origin,
       designer,
       isDiscount,
-      quantity: 1,
+      quantity: quantity,
       totalPrice: price * quantity,
     };
 
     dispatch(addToCart(newProduct));
     onSetIsOpenCart(true);
   }
-
-  const isInCart = currentQuantity > 0;
 
   return (
     <div className="grid min-h-96 grid-cols-1 gap-8 sm:grid-cols-2">
