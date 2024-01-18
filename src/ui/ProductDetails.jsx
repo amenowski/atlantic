@@ -22,7 +22,7 @@ function ProductDetails() {
   const { onSetIsOpenCart } = useCartPreview();
 
   const currentQuantity = useSelector(
-    getCurrentProductQuantity(product.at(0)?.id),
+    getCurrentProductQuantity(product?.at(0)?.id),
   );
 
   if (isLoading) return <Spinner />;
