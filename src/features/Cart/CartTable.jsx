@@ -16,10 +16,10 @@ function CartTable() {
         <EmptyCart />
       ) : (
         <>
-          <div role="table" className="uppercase">
-            <header className=" grid grid-cols-[1fr_0.7fr_0.7fr_0.3fr] border-b border-black pb-4 text-center text-sm">
+          <div role="table" className="max-h-[600px] overflow-y-auto uppercase">
+            <header className="hidden grid-cols-[1fr_0.7fr_0.7fr_0.3fr] grid-rows-2 border-b border-black pb-4 text-center text-sm md:grid">
               <div className="text-left">Product</div>
-              <div>Price</div>
+              <div className="row-span-2">Price</div>
               <div>Quantity</div>
               <div>Total</div>
             </header>
