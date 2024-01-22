@@ -31,33 +31,33 @@ function MobileNav() {
         <li>
           <Link
             className="transition-all duration-300 hover:text-gray-300"
-            to="shop/living"
+            to="shop"
           >
-            living
+            shop
           </Link>
         </li>
         <li>
           <Link
             className="transition-all duration-300 hover:text-gray-300"
-            to="shop/dining"
+            to="blog"
           >
-            dining
+            blog
           </Link>
         </li>
         <li>
           <Link
             className="transition-all duration-300 hover:text-gray-300"
-            to="shop/furniture"
+            to="about"
           >
-            furniture
+            about
           </Link>
         </li>
         <li>
           <Link
             className="transition-all duration-300 hover:text-gray-300"
-            to="shop/lighting"
+            to="contact"
           >
-            lighting
+            contact
           </Link>
         </li>
       </ul>
