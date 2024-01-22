@@ -7,6 +7,7 @@ import Philosophy from './pages/Philosophy';
 import AppLayout from './ui/AppLayout';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ProductDetails from './ui/ProductDetails';
+import About from './pages/About';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -27,6 +28,7 @@ function App() {
             <Route path="shop" element={<Shop />} />
             <Route path="cart" element={<Cart />} />
             <Route path="blog" element={<Blog />} />
+            <Route path="about" element={<About />} />
             <Route path="product/:name" element={<ProductDetails />} />
             <Route path="philosophy" element={<Philosophy />} />
           </Route>

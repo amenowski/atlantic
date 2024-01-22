@@ -23,7 +23,7 @@ function Product({ product }) {
         </div>
       </Link>
       <div className="py-4">
-        <h4 className="mb-2 text-xl">{name}</h4>
+        <h4 className="mb-2 text-lg xl:text-xl">{name}</h4>
         <p className="text-gray-400">{formatCurrency(price)}</p>
       </div>
     </div>
