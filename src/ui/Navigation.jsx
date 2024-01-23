@@ -13,25 +13,25 @@ function Navigation() {
           <div className="absolute left-0 top-[55px] z-[999] hidden w-56 flex-col gap-2 bg-primary px-6 py-4 normal-case group-hover:flex">
             <Link
               className="transition-all duration-300 hover:text-gray-300"
-              to="shop/living/storage"
+              to="/shop?categories=storage"
             >
               Storage
             </Link>
             <Link
               className="transition-all duration-300 hover:text-gray-300"
-              to="shop/living/desk"
+              to="/shop?categories=desk"
             >
               Desk
             </Link>
             <Link
               className="transition-all duration-300 hover:text-gray-300"
-              to="shop/living/clocks"
+              to="/shop?categories=clocks"
             >
               Clocks
             </Link>
             <Link
               className="transition-all duration-300 hover:text-gray-300"
-              to="shop/living/tools"
+              to="/shop?categories=tools"
             >
               Tools
             </Link>
