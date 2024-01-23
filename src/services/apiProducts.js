@@ -1,7 +1,7 @@
 import { PAGE_SIZE } from '../utils/constants';
 import supabase from './supabase';
 
-export async function getProducts({ filter, sortBy, page }) {
+export async function getProducts({ filter, sortBy, page, categories }) {
   let query = supabase.from('products').select('*', { count: 'exact' });
 
   // Filter
@@ -13,6 +13,8 @@ export async function getProducts({ filter, sortBy, page }) {
     query = query.order(sortBy.field, {
       ascending: sortBy.direction === 'asc',
     });
+
+  // Pagination
 
   if (page) {
     const from = (page - 1) * PAGE_SIZE;
@@ -29,6 +31,21 @@ export async function getProducts({ filter, sortBy, page }) {
   }
 
   return { products, count };
+}
+
+export async function getNewestProducts(limit) {
+  let { data: newestProducts, error } = await supabase
+    .from('products')
+    .select('*')
+    .order('created_at', { ascending: true })
+    .limit(limit);
+
+  if (error) {
+    console.error(error);
+    throw new Error('Products could be not loaded');
+  }
+
+  return newestProducts;
 }
 
 export async function getProductByName(name) {
