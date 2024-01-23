@@ -17,20 +17,20 @@ function Collection() {
           </div>
 
           <ul className="flex flex-col gap-2 py-4 text-lg text-gray-500">
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/clocks">Clocks</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              Clocks
             </li>
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/desk">Desks Mirrors</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              Desks Mirrors
             </li>
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/storage">Storage</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              Storage
             </li>
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/tools">Tools</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              Tools
             </li>
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/sconces">Sconces</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              Sconces
             </li>
           </ul>
         </div>
@@ -47,20 +47,20 @@ function Collection() {
           </div>
 
           <ul className="flex flex-col gap-2 py-4 text-lg text-gray-500">
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/chairs">Chairs</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              Chairs
             </li>
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/benches">Benches</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              Benches
             </li>
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/mirrors">Mirrors</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              sMirrors
             </li>
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/sofas">Sofas</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              Sofas
             </li>
-            <li className="transition-all duration-300 hover:text-gray-700">
-              <Link to="shop/tables">Tables</Link>
+            <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
+              Tables
             </li>
           </ul>
         </div>
