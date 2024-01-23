@@ -23,6 +23,12 @@ export async function getProducts({ filter, sortBy, page, categories }) {
     query = query.range(from, to);
   }
 
+  // Categories
+
+  if (categories) {
+    query = query.in('category', categories);
+  }
+
   const { data: products, error, count } = await query;
 
   if (error) {
