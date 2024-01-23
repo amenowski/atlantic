@@ -1,9 +1,10 @@
+import Categories from './Categories';
 import Filter from './Filter';
 import SortBy from './SortBy';
 
 function ShopOperations() {
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <Filter
         options={[
           { value: 'all', label: 'All' },
@@ -27,6 +28,7 @@ function ShopOperations() {
           },
         ]}
       />
+      <Categories />
     </div>
   );
 }
