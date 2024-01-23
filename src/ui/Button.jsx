@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 function Button({ children, disabled, to, type, onClick, width }) {
-  const base = `flex items-center gap-2 uppercase py-4 px-4 border border-primary text-center tracking-widest text-sm transition-all duration-300`;
+  const base = ` gap-2 uppercase py-4 px-4 border border-primary text-center tracking-widest text-sm transition-all duration-300`;
 
   const styles = {
     primary:
@@ -10,7 +10,7 @@ function Button({ children, disabled, to, type, onClick, width }) {
     secondary: base + ` bg-white text-primary hover:bg-[#eae1e1] w-${width} `,
     primarySmall:
       base +
-      ` p-2 bg-primary text-white hover:bg-[#662e2e] text-sm tracking-wide sm:text-base sm:tracking-widest w-${width} `,
+      ` flex items-center p-2 bg-primary text-white hover:bg-[#662e2e] text-sm tracking-wide sm:text-base sm:tracking-widest w-${width} `,
   };
 
   if (to)
