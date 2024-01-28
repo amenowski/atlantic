@@ -1,21 +1,22 @@
 import { Link } from 'react-router-dom';
 
 function Button({ children, disabled, to, type, onClick, width }) {
-  const base = ` gap-2 uppercase py-4 px-4 border border-primary text-center tracking-widest text-sm transition-all duration-300`;
+  const base = ` gap-2 uppercase border border-primary text-center tracking-widest transition-all duration-300`;
 
   const styles = {
     primary:
       base +
-      ` bg-primary text-white hover:bg-[#662e2e] text-sm tracking-wide sm:text-base sm:tracking-widest w-${width} `,
-    secondary: base + ` bg-white text-primary hover:bg-[#eae1e1] w-${width} `,
+      ` p-3  md:p-4 bg-primary text-white hover:bg-[#662e2e] tracking-wide sm:tracking-widest w-${width} `,
+    secondary:
+      base + ` py-4 px-4 bg-white text-primary hover:bg-[#eae1e1] w-${width} `,
     primarySmall:
       base +
-      ` flex items-center p-2 bg-primary text-white hover:bg-[#662e2e] text-sm tracking-wide sm:text-base sm:tracking-widest w-${width} `,
+      ` p-2 flex items-center text-sm bg-primary text-white hover:bg-[#662e2e] tracking-wide sm:tracking-widest w-${width} `,
   };
 
   if (to)
     return (
-      <Link to={to} className={`block ${styles[type]} `}>
+      <Link to={to} onClick={onClick} className={`block ${styles[type]} `}>
         {children}
       </Link>
     );
