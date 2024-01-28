@@ -27,8 +27,9 @@ function Categories() {
       });
 
       setCategories(updatedCategories);
+      console.log(updatedCategories);
     }
-  }, [searchParams, categories]);
+  }, [searchParams]);
 
   function handleChange(category) {
     setCategories((prevCategories) => {
