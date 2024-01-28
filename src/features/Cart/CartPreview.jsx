@@ -48,10 +48,16 @@ function CartPreview() {
         <div className="flex gap-2">
           {cart.length > 0 && (
             <>
-              <Button width="full" type="secondary" to="cart">
+              <Button
+                width="full"
+                type="secondary"
+                to="cart"
+                onClick={() => handleCloseCart()}
+              >
                 View cart
               </Button>
-              <Button width="full" type="primary" to="cart">
+              <Button width="full" type="primary" to="checkout">
+                {' '}
                 Checkout
               </Button>
             </>
