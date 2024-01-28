@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import Collection1 from '../assets/images/collection-1.png';
 import Collection2 from '../assets/images/collection-2.png';
 
@@ -54,7 +53,7 @@ function Collection() {
               Benches
             </li>
             <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
-              sMirrors
+              Mirrors
             </li>
             <li className="cursor-pointer transition-all duration-300 hover:text-gray-700">
               Sofas

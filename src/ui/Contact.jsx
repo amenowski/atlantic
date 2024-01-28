@@ -1,3 +1,4 @@
+import Input from './Input';
 import Button from './Button';
 import { CiInstagram } from 'react-icons/ci';
 import { FaPinterest } from 'react-icons/fa';
@@ -31,7 +32,7 @@ function Contact() {
       <div className="flex w-full flex-col gap-6 border-y px-4 py-20">
         <h5 className="text-lg uppercase">Newsletter</h5>
         <div className="flex items-center justify-center gap-2">
-          <input
+          <Input
             placeholder="Email address"
             className="border p-3.5 outline-none placeholder:text-gray-200 focus:ring-1 focus:ring-gray-400 md:w-1/2 md:p-4"
           />
