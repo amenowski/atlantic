@@ -4,7 +4,7 @@ import logo from '../assets/images/logo.png';
 function Logo() {
   return (
     <Link to="/home">
-      <img src={logo} className={`h-20 lg:h-10`} alt="Store logo" />
+      <img src={logo} className={`h-20`} alt="Store logo" />
     </Link>
   );
 }
