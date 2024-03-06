@@ -38,9 +38,9 @@ function Slider() {
           className="absolute h-[600px] w-full object-cover"
         />
         <div className="z-50 pt-28 text-center">
-          <h1 className="mb-4 text-5xl font-normal tracking-wider sm:text-6xl">
+          <h2 className="mb-4 text-5xl font-normal tracking-wider sm:text-6xl">
             Liveable Luxury
-          </h1>
+          </h2>
           <p className="mb-8 text-sm tracking-widest sm:text-base">
             Combining quality with intentional design
           </p>
@@ -52,9 +52,9 @@ function Slider() {
       <SwiperSlide className="relative flex justify-end">
         <img src={slide2} alt="" className="h-[600px] w-full object-cover" />
         <div className="absolute p-14 text-right">
-          <h1 className="mb-4 text-5xl font-normal tracking-wider sm:text-6xl">
+          <h2 className="mb-4 text-5xl font-normal tracking-wider sm:text-6xl">
             Stremlined Designs
-          </h1>
+          </h2>
           <p className="mb-8 text-sm tracking-widest sm:text-base">
             Sleek, stylish and sophisticated. The perfect match for your home.
           </p>
@@ -66,9 +66,9 @@ function Slider() {
       <SwiperSlide className="relative flex items-end">
         <img src={slide3} alt="" className="h-[600px] w-full object-cover" />
         <div className="absolute p-14">
-          <h1 className="mb-4 text-5xl font-normal tracking-wider sm:text-6xl">
+          <h2 className="mb-4 text-5xl font-normal tracking-wider sm:text-6xl">
             Exceptional Quality
-          </h1>
+          </h2>
           <p className="mb-8 text-sm tracking-widest sm:text-base">
             We work with the world's finest materials.
           </p>
